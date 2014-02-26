@@ -4,7 +4,7 @@ block content
     .container
         for item in applicants
             div.applicantItem(data-id=item._id.toString())
-                a.personName(href='http://127.0.0.1:3001/applicant/individual/' + item._id)= item.name
+                a.personName(href='http://obscure-earth-8662.herokuapp.com/applicant/individual/' + item._id)= item.name
                 p.formFields Bio: 
                     span.itemClass #{item.bio}
                 p.formFields Skills: 
