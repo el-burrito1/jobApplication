@@ -10,7 +10,12 @@ var mongoose = require('mongoose');
 var applicantController = require('./controllers/applicantController');
 var applicantModel = require('./models/applicationModel');
 
-mongoose.connect('mongodb://localhost/pickAxe');
+if(global.process.env.MONGOHQ_URL){
+	mongoose.connect(global.process.env.MONGOHQ_URL)
+}else{
+	mongoose.connect('mongodb://localhost/pickAxe');
+}
+
 
 var app = express();
 
@@ -44,3 +49,5 @@ app.get('/applicant/individual/:id' , applicantController.viewApplicant);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
