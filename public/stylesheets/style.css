@@ -1,0 +1,31 @@
+body {
+  font: 14px "Helvetica-Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.personName{
+	font-size:28pt;
+	display:block;
+	margin-bottom:20px;
+}
+
+.remove{
+/*	margin-left:55px;*/
+}
+
+.formFields{
+	font-weight: bold;
+}
+
+.itemClass{
+	font-weight:normal;
+}
+
+.backTag{
+	display:block;
+	margin-top:10px;
+	margin-left:20px;
+}

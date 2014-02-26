@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		for item in applicants
+			h1= item.name
+			p.formFields Bio:
+				span.itemClass #{item.bio}
+			p.formFields Skills:
+				span.itemClass #{item.skills}
+			p.formFields Years of experience:
+				span.itemClass #{item.years}
+			p.formFields Reasons for applying:
+				span.itemClass #{item.why}
+		a.backTag(href='http://127.0.0.1:3001/applicants') Back to All Applicants
